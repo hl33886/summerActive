@@ -1,1 +1,2 @@
-# summerActive
+基于jquery框架做的一个暑期活动
+layer使用，tmpl模板的使用，ajax请求+css3
