@@ -29,6 +29,8 @@
 	</dl>
 </div>	
 <div class="banners">
+	<h2><span></span><b></b></h2>
+	<h4></h4>
 	<div class="coupons">
 		<div class="receive"></div>
 	</div>
@@ -369,16 +371,17 @@
 			$(this).addClass("cur").siblings().removeClass("cur");
 		})
 
-		// $.ajax({
-  //           url: "line.ajaxindex.html",
-  //           dataType: "json",
-  //           // data: $.extend({}, { p: p }),
-  //           success: function (result)  {
-  //               if (result.status == "1") {	
-  //               	$(".line-list").html($(".tmpl-linelist").tmpl({ list: result.list }));
-  //               }
-  //           }
-		// });
+		$(".banners").addClass('animation');
+		$.ajax({
+		          url: "line.ajaxindex.html",
+		          dataType: "json",
+		          data: $.extend({}, { p: p }),
+		          success: function (result)  {
+		              if (result.status == "1") {	
+		              	$(".line-list").html($(".tmpl-linelist").tmpl({ list: result.list }));
+		              }
+		          }
+		});
 	})
 </script>
 

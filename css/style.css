@@ -26,10 +26,47 @@ input:-webkit-autofill{background-color:transparent}
 .nav-list a:not(.more):hover:after,.nav-list a.cur:after{ content: ""; width: 15px;height: 7px;position: absolute;top: 26px;left: 18px; background: url(../images/arrow.png) no-repeat;}
 .nav-list .more{display: inline-block; height: 24px; line-height: 24px;font-size: 16px;color: #0087eb; border: 1px solid #0087eb; padding:0 10px; cursor: pointer;border-radius: 15px;-moz-border-radius: 15px;-webkit-border-radius: 15px;-ms-border-radius: 15px;margin-left: 15px;}
 
-.banners{width: 100%;height: 192px;background: url(../images/banner.jpg) no-repeat top center;padding-top: 735px;}
+.banners{width: 100%;height: 192px;background: url(../images/banner.jpg) no-repeat top center;padding-top: 735px; position: relative; overflow: hidden;}
+.banners h2{height: 269px; width: 1100px; position: absolute; left: 50%; top: -36%; margin-left: -550px; }
+.banners h2 span{background: url(../images/title.png) no-repeat top; height: 269px; width: 1003px; display: inline-block; position: relative; z-index: 3}
+.banners h2 b{background: url(../images/sun.png) no-repeat top; height: 148px; width: 149px; position: absolute; right: 260px; top: -20px; z-index: 2;}
+.banners h4{background: url(../images/ad.png) no-repeat top; height: 104px; width: 634px; position: absolute; right:-34%; top: 39%; margin-left: -316px;}
+.banners h2,.banners h4{transition: all 1s; -webkit-transition: all 1s;}
+.banners.animation h2{ top: 15%;}
+.banners.animation h4{right: 50%; margin-right: -316px;}
+.banners.animation h2 b{ animation:shake 0.5s 1s;}
+@keyframes shake{
+	0% {
+		-webkit-transform: rotate(0deg);
+		        transform: rotate(0deg);
+	}
+	100% {
+		-webkit-transform: rotate(360deg);
+		        transform: rotate(360deg);
+	}
+
+}
+@keyframes btnscroll{
+	0% {
+		-webkit-transform: translateY(0%);
+		        transform: translateY(0%);
+	}
+	50% {
+		-webkit-transform: translateY(-10%);
+		        transform: translateY(-10%);
+	}
+	100% {
+		-webkit-transform: translateY(0%);
+		        transform: translateY(0%);
+	}
+
+}
+
+
 .coupons{width: 1074px;height: 108px;margin: 0 auto;background: url(../images/coupons.png) no-repeat;position: relative;}
 .receive{width: 202px;height: 75px;background: url(../images/receive.png) no-repeat;position: absolute;top: 20px;left: 443px;cursor: pointer;}
 .coupons-cont{width: 300px;height: 80px;background-color: #f2f2f2;color: #000;border-radius: 50px;-moz-border-radius: 50px;-webkit-border-radius: 50px;-ms-border-radius: 50px;line-height: 80px;text-align: center;background: #fff;}
+.receive:hover{ animation: btnscroll 0.5s 3;}
 
 .slider{ position: fixed; top: 40%; left: 120px; z-index: 8}
 .slider .top-img{ position: absolute; top: -129px; left: -2px; background: url(../images/balloon.png) no-repeat; width: 117px; height: 132px; z-index: -1}
